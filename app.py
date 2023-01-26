@@ -1,4 +1,5 @@
 from flask import Flask
+from flank import request
 import os
 import math
 
@@ -6,9 +7,17 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-
+    ns = request.args.get('num')
+    if n:
+        try:
+            nb = int(ns)
+        except:
+            return "bad num {ns}"
+    else:
+         return "no num!"
+        
     out = [] 
-    match [ 2 ]:
+    match [ nb ]:
         case [ number ]:
             out.append(f"Look at this square root: {math.sqrt(number)}\n")
     
