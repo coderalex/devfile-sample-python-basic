@@ -10,7 +10,7 @@ def hello():
     out = [] 
     match [ 2 ]:
         case [ number ]:
-            out.append(f"Look at this square root: {math.sqrt(number)}\n"))
+            out.append(f"Look at this square root: {math.sqrt(number)}\n")
     
     for key, value in os.environ.items():
         out.append(f"{key}={value}\n")
