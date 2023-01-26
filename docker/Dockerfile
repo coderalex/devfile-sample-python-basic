@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi9/python-39:latest
+FROM docker.io/python:3.11.1-slim
 
 # By default, listen on port 8081
 EXPOSE 8081/tcp
