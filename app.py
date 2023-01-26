@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    """ns = request.args.get('num')
+    ns = request.args.get('num')
     if ns:
         try:
             nb = int(ns)
@@ -15,7 +15,7 @@ def hello():
             return "bad num {ns}"
     else:
          return "no num!"
-    """
+    
         
     out = ["<pre>"] 
     match [ nb ]:
@@ -31,6 +31,5 @@ def hello():
 if __name__ == '__main__':
     port = os.environ.get('FLASK_PORT') or 8080
     port = int(port)
-    app.debug = True
 
     app.run(port=port,host='0.0.0.0')
