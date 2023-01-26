@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     ns = request.args.get('num')
-    if n:
+    if ns:
         try:
             nb = int(ns)
         except:
