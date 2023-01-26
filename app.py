@@ -22,8 +22,8 @@ def hello():
         case [ number ]:
             out.append(f"Look at this square root: {math.sqrt(number)}\n")
     
-    for key, value in request.args.items():
-        out.append(f"{key}={value}\n")
+    #for key, value in request.args.items():
+    #    out.append(f"{key}={value}\n")
             
     return ''.join(out + ["</pre>"])
     
