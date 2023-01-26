@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    ns = request.args.get('num')
+    """ns = request.args.get('num')
     if ns:
         try:
             nb = int(ns)
@@ -15,16 +15,17 @@ def hello():
             return "bad num {ns}"
     else:
          return "no num!"
+    """
         
-    out = [] 
+    out = ["<pre>"] 
     match [ nb ]:
         case [ number ]:
             out.append(f"Look at this square root: {math.sqrt(number)}\n")
     
-    for key, value in os.environ.items():
+    for key, value in request.args.items():
         out.append(f"{key}={value}\n")
             
-    return ''.join(out)
+    return ''.join(out + ["</pre>"])
     
 
 if __name__ == '__main__':
