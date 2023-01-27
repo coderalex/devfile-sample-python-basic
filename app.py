@@ -16,7 +16,7 @@ def hello():
         except:
             return "bad num {ns}"
     else:
-         out.append("no num! using {default_num}")
+         out.append(f"no num! using {default_num}")
          nb = default_num
 
     match [ nb ]:
