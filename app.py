@@ -7,10 +7,18 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    nb = 2
+    default_num = 2
+    ns = request.args.get('num')
     out = ['<pre>']
-    for key, value in request.args.items():
-        out.append(f'{key} = {value}')
+    if ns:
+        try:
+            nb = int(ns)
+        except:
+            return "bad num {ns}"
+    else:
+         out.append("no num! using {default_num}")
+         nb = default_num
+
     match [ nb ]:
         case [ number ]:
             out.append(f"Look at this square root: {math.sqrt(number)}\n")
