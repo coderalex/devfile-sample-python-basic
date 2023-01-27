@@ -15,17 +15,16 @@ def hello():
             return "bad num {ns}"
     else:
          return "no num!"
-    
         
-    out = ["<pre>"] 
+    out = [] 
     match [ nb ]:
         case [ number ]:
             out.append(f"Look at this square root: {math.sqrt(number)}\n")
     
-    #for key, value in request.args.items():
-    #    out.append(f"{key}={value}\n")
+    for key, value in os.environ.items():
+        out.append(f"{key}={value}\n")
             
-    return ''.join(out + ["</pre>"])
+    return ''.join(out)
     
 
 if __name__ == '__main__':
