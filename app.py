@@ -21,7 +21,7 @@ def hello():
 
     match [ nb ]:
         case [ number ]:
-            out.append(f"Look at this square root: {math.sqrt(number)}\n")
+            out.append(f"The square root of {nb} is: {math.sqrt(number)}\n")
     out.append('</pre>')
 
     return '\n'.join(out)
