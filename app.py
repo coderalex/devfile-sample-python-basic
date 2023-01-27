@@ -17,7 +17,7 @@ def hello():
         try:
             nb = float(ns)
         except ValueError:
-            out.append(f"<p>bad num {ns}</p>")
+            out.append(f"<p>Bad number: <code>{ns}</code></p>")
     if nb is None:
          out.append(f"<p>No valid number entered; using <code>{default_num}</code> by default.</p>")
          nb = default_num
@@ -25,9 +25,9 @@ def hello():
     match [ nb ]:
         case [ number ]:
             if number < 0:
-                out.append(f"<p>Can't find square root of {nb}</p>")
+                out.append(f"<p>Can't find the square root of <code>{nb}</code> since it's negative</p>")
             else:
-                out.append(f"<p>The square root of {nb} is: {math.sqrt(number)}</p>")
+                out.append(f"<p>The square root of {ns} is: {math.sqrt(number)}</p>")
     return '\n'.join(out) + '\n'
     
 
