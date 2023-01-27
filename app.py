@@ -6,8 +6,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
+    nb = 2
     out = [] 
-    match [ nb ]:
+    match [ nb  ]:
         case [ number ]:
             out.append(f"Look at this square root: {math.sqrt(number)}\n")
     
