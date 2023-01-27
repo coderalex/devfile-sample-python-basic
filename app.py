@@ -19,7 +19,7 @@ def hello():
         except ValueError:
             out.append(f"<p>bad num {ns}</p>")
     if nb is None:
-         out.append(f"<p>using {default_num}</p>")
+         out.append(f"<p>No valid number entered; using <code>{default_num}</code> by default.</p>")
          nb = default_num
 
     match [ nb ]:
