@@ -5,7 +5,7 @@ import math
 
 app = Flask(__name__)
 
-@app.route('/sqrt')
+@app.route('/')
 def hello():
     nb = 2
     out = []
