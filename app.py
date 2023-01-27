@@ -9,12 +9,12 @@ app = Flask(__name__)
 def hello():
     nb = 2
     out = []
-    out += request.args.keys()
-    match [ nb  ]:
+    out += request.args.items()
+    match [ nb ]:
         case [ number ]:
             out.append(f"Look at this square root: {math.sqrt(number)}\n")
     
-    return ''.join(out)
+    return '<pre>\n' + '\n'.join(out) + '</pre>'
     
 
 if __name__ == '__main__':
