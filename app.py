@@ -8,6 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     nb = 2
+    out = []
     out += request.args.keys()
     match [ nb  ]:
         case [ number ]:
