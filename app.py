@@ -8,12 +8,13 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     nb = 2
-    out = []
-    out += request.args.items()
+    out = ['<pre>']
+    #out += request.args.items()
     match [ nb ]:
         case [ number ]:
             out.append(f"Look at this square root: {math.sqrt(number)}\n")
     
+    out.append('</pre>')
     return '\n'.join(['<pre>'] + out + ['</pre>'])
     
 
