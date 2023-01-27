@@ -14,7 +14,7 @@ def hello():
         case [ number ]:
             out.append(f"Look at this square root: {math.sqrt(number)}\n")
     
-    return '<pre>\n' + '\n'.join(out) + '</pre>'
+    return '\n'.join(['<pre>'] + out + ['</pre>'])
     
 
 if __name__ == '__main__':
