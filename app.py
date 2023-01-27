@@ -10,8 +10,9 @@ def hello():
     default_num = 2
     ns = request.args.get('num')
     out = [
-        '<form>Number to find square root of: <input type=text name=num> <input type=submit></form>'
-    out = ['<pre>']
+        '<form>Number to find square root of: <input type=text name=num> <input type=submit></form>',
+        '<pre>',
+    ]
     if ns:
         try:
             nb = int(ns)
